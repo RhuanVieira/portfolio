@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/light.css">
+    <link rel="stylesheet" href="./css/especialidades.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    
+    <header>
+        <nav>
+
+            <h1 class="title">
+             I am a <span class="typewriter"></span>
+            </h1>
+             <ul>
+            <li>About</li>
+            <li>Projects</li>
+            <li>Contact</li>
+            <li id="light">Theme</li>
+             </ul>
+
+        </nav>
+    </header>
+
+   <main class="hero">
+    <div class="hero-content">
+        <div class="profile-container">
+            <img src="img/1762573343817.png" alt="Seu Nome" class="profile-pic">
+        </div>
+
+        <h2 class="name-title">Rhuan Vieira</h2>
+        
+        <h3 class="typewriter-text">
+            Front-End Developer em formação | Java | UX/UI | IA e Prompts
+        </h3>
+
+        <button class="dowload-cv">Baixar CV</button>
+    </div>
+<p class="ler-mais"></p>
+    <a href="#about" class="scroll-down">
+        <div class="mouse">
+            <div class="wheel"></div>
+        </div>
+        <div class="arrow">
+            <span></span>
+            <span></span>
+        </div>
+    </a>
+</main>
+<section id="about">
+    <h1 class="especialidades">Minhas <span class="esp-span">Especialidades</span></h1>
+
+   <div class="cards-container">
+    <div class="card">
+        <div class="card-icon-main"><i class='bx bx-code-alt'></i></div>
+        <h3>Front-end</h3>
+        <p>Interfaces responsivas e interativas.</p>
+        <div class="tech-logos">
+            <i class='bx bxl-html5 html' title="HTML5"></i>
+            <i class='bx bxl-css3 css' title="CSS3"></i>
+            <i class='bx bxl-javascript js' title="JavaScript"></i>
+            <i class='bx bxl-react react' title="React"></i>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-icon-main"><i class='bx bx-server'></i></div>
+        <h3>Back-end</h3>
+        <p>APIs robustas e processamento de dados.</p>
+        <div class="tech-logos">
+            <i class='bx bxl-nodejs node' title="Node.js"></i>
+            <i class='bx bxl-php php' title="PHP"></i>
+            <i class='bx bxl-java java' title="Java"></i>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-icon-main"><i class='bx bx-paint'></i></div>
+        <h3>UX/UI</h3>
+        <p>Design focado na experiência do usuário.</p>
+        <div class="tech-logos">
+            <i class='bx bxl-figma figma' title="Figma"></i>
+            
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-icon-main"><i class='bx bx-wrench'></i></div>
+        <h3>Ferramentas</h3>
+        <p>Infraestrutura e controle de versão.</p>
+        <div class="tech-logos">
+            <i class='bx bxl-tux linux' title="Linux"></i>
+            <i class='bx bxl-git git' title="Git"></i>
+            <i class='bx bxl-postgresql mysql' title="MySQL/MariaDB"></i>
+        </div>
+    </div>
+</div>
+</section>
+    <script src="./js/toggleBar.js"></script>
+    <script src="./js/typewriter.js"></script>
+    <script src="./js/lightMode.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+
+.ibm-plex-sans-regular {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;  /* normal */
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+    
+    :root {
+ 
+  --bg-main: #020B1F;        /* azul profundo (fundo principal) */
+  --bg-secondary: #020B1FCC;
+  --bg-terciary: #01040b; /* azul com transparência */
+  --bg-panel: #071A3D;       /* cards / seções */
+  --bg-hover: #0A2A66;       /* hover técnico */
+
+
+  --border-subtle: #12326B;
+  --border-strong: #1E40AF;
+
+
+  --text-primary: #E6ECFF;
+  --text-secondary: #9FB3E1;
+  --text-muted: #6B85C6;
+
+
+  --accent-primary: #3B82F6;   /* azul tecnológico */
+  --accent-secondary: #22D3EE; /* ciano técnico */
+  --accent-success: #22C55E;
+  --accent-warning: #FACC15;
+  --accent-danger: #EF4444;
+
+  
+  --glass-bg: rgba(7, 26, 61, 0.7);
+  --glass-blur: blur(14px);
+  --shadow-soft: 0 10px 30px rgba(2, 11, 31, 0.6);
+  --shadow-strong: 0 20px 60px rgba(2, 11, 31, 0.8);
+
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+
+ 
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.4s ease;
+
+  [data-theme="light"] {
+    
+    --bg-main: #f4f4f4;
+    --text-primary: #333333;
+    --text-secondary: #555555;
+}
+
+    }

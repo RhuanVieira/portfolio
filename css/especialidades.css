@@ -1,0 +1,108 @@
+@import url('./root.css');
+
+/* --- Seção About / Especialidades --- */
+#about {
+    min-height: 90vh;
+    padding: 100px 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.especialidades {
+    font-size: 2.5rem;
+    color: var(--text-primary);
+    font-family: "IBM Plex Sans", sans-serif;
+}
+
+.esp-span {
+    color: var(--accent-primary);
+}
+
+/* --- Container de Cards --- */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    width: 100%;
+    margin-top: 60px;
+}
+
+/* --- Card Individual --- */
+.card {
+    background-color: var(--bg-terciary);
+    padding: 30px;
+    border-radius: var(--radius-md);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 320px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-primary);
+}
+
+.card-icon-main i {
+    font-size: 45px;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    color: var(--accent-primary);
+    font-family: "IBM Plex Sans", sans-serif;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* --- Container de Mini Logos --- */
+.tech-logos {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.tech-logos i {
+    font-size: 28px;
+    transition: transform 0.2s, filter 0.2s;
+}
+
+.tech-logos i:hover {
+    transform: scale(1.3);
+    filter: brightness(1.2);
+}
+
+/* --- Cores Específicas das Tecnologias --- */
+
+/* Front-end */
+.tech-logos i.html { color: #E34F26; }
+.tech-logos i.css { color: #1572B6; }
+.tech-logos i.js { color: #F7DF1E; }
+.tech-logos i.react { color: #61DAFB; }
+
+/* Back-end */
+.tech-logos i.node { color: #339933; }
+.tech-logos i.php { color: #777BB4; }
+.tech-logos i.java { color: #007396; }
+
+/* Design */
+.tech-logos i.figma { color: #F24E1E; }
+.tech-logos i.canva { color: #00C4CC; }
+
+/* Outros */
+.tech-logos i.linux { color: #FCC624; }
+.tech-logos i.git { color: #F05032; }
+.tech-logos i.mysql { color: #4479A1; }
