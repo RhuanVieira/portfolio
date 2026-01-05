@@ -1,6 +1,6 @@
 @import url('./root.css');
 
-/* --- Seção About / Especialidades --- */
+
 #about {
     min-height: 90vh;
     padding: 100px 10%;
@@ -8,6 +8,7 @@
     flex-direction: column;
     align-items: center;
     gap: 50px;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.077);
 }
 
 .especialidades {
@@ -20,16 +21,16 @@
     color: var(--accent-primary);
 }
 
-/* --- Container de Cards --- */
+
 .cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
     width: 100%;
-    margin-top: 60px;
+    margin-top: 30px;
 }
 
-/* --- Card Individual --- */
+
 .card {
     background-color: var(--bg-terciary);
     padding: 30px;
@@ -66,7 +67,7 @@
     line-height: 1.5;
 }
 
-/* --- Container de Mini Logos --- */
+
 .tech-logos {
     display: flex;
     justify-content: center;
@@ -87,22 +88,35 @@
 
 /* --- Cores Específicas das Tecnologias --- */
 
-/* Front-end */
+
 .tech-logos i.html { color: #E34F26; }
 .tech-logos i.css { color: #1572B6; }
 .tech-logos i.js { color: #F7DF1E; }
 .tech-logos i.react { color: #61DAFB; }
 
-/* Back-end */
+
 .tech-logos i.node { color: #339933; }
 .tech-logos i.php { color: #777BB4; }
 .tech-logos i.java { color: #007396; }
 
-/* Design */
+
 .tech-logos i.figma { color: #F24E1E; }
 .tech-logos i.canva { color: #00C4CC; }
 
-/* Outros */
+
 .tech-logos i.linux { color: #FCC624; }
 .tech-logos i.git { color: #F05032; }
 .tech-logos i.mysql { color: #4479A1; }
+
+.ver-projetos{
+    border: 0.5px solid var(--accent-primary);
+    background: none;
+    color: var(--accent-primary);
+    padding: 10px 10px;
+    border-radius: var(--radius-sm);
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 12px;
+    position: relative;
+    text-decoration: none;
+    transition: background-color var(--transition-normal);
+}

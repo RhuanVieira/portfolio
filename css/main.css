@@ -94,6 +94,19 @@ ul{
     border-bottom: 0.5px solid rgba(255, 255, 255, 0.077);
 }
 
+.hero-assets {
+    position: relative; /* Necessário para posicionar a seta */
+    top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center;     /* Centraliza horizontalmente */
+    min-height:10vh;       /* Ocupa a altura total da tela */
+    width: 100%;
+    background-color: var(--bg-main);
+    
+}
+
 .hero-content {
     display: flex;
     flex-direction: column; /* Alinha os itens em coluna (um embaixo do outro) */
@@ -107,7 +120,7 @@ ul{
     height: 140px;
     border-radius: 50%; /* Deixa a foto redonda */
     object-fit: cover;
-    margin-top: 100px;
+    margin-top: px;
     border: 4px solid var(--text-primary); /* Moldura com a cor do seu tema */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
