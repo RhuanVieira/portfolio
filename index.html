@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+<<<<<<< HEAD
+=======
+    <link rel="stylesheet" href="css/root.css">
+>>>>>>> 6770cba (Recuperação do sistema após erro de árvore)
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/light.css">
     <link rel="stylesheet" href="./css/especialidades.css">
@@ -23,7 +27,11 @@
             <li>About</li>
             <li>Projects</li>
             <li>Contact</li>
+<<<<<<< HEAD
             <li id="light">Theme</li>
+=======
+            <li id="light" onclick="mudaTema()">Theme</li>
+>>>>>>> 6770cba (Recuperação do sistema após erro de árvore)
              </ul>
 
         </nav>
@@ -147,23 +155,36 @@
 
         <div class="project-featured">
             <div class="project-img">
+<<<<<<< HEAD
                 <img src="./img/Bibliotec_banner.png" alt="Capa do Projeto Bibliotec">
+=======
+                <img src="./img/ExpressEats_banner.png" alt="Capa do Projeto Bibliotec">
+>>>>>>> 6770cba (Recuperação do sistema após erro de árvore)
             </div>
             
             <div class="project-info">
                 <span class="project-category">Front-End</span>
                 <h3>Express Eats</h3>
                 <p>
+<<<<<<< HEAD
                     Sistema inteligente de gestão de acervos que permite o controle de empréstimos, 
                     cadastro de usuários e organização de títulos com busca em tempo real.
+=======
+                    Uma solução moderna de delivery que une design minimalista e alta performance. Com um fluxo de navegação inspirado no iFood, o projeto foca na agilidade do processo de checkout e na organização visual de cardápios, entregando uma experiência de usuário premium e totalmente adaptável a qualquer dispositivo.
+>>>>>>> 6770cba (Recuperação do sistema após erro de árvore)
                 </p>
                 
                 <div class="tech-logos">
                     <i class='bx bxl-html5 html' title="HTML5"></i>
                     <i class='bx bxl-css3 css' title="CSS3"></i>
                     <i class='bx bxl-javascript js' title="JavaScript"></i>
+<<<<<<< HEAD
                    <i class='bx bxl-php php' title="PHP"></i>
                     <i class='bx bxl-postgresql mysql' title="Database"></i>
+=======
+                   
+                    
+>>>>>>> 6770cba (Recuperação do sistema após erro de árvore)
                 </div>
 
                 <div class="project-links">
@@ -177,14 +198,43 @@
             </div>
         </div>
 
+<<<<<<< HEAD
         <div class="card-placeholder" style="border: 2px dashed var(--text-secondary); padding: 20px; text-align: center; border-radius: 8px; opacity: 0.5;">
+=======
+        <div class="card-placeholder" style="border: 2px dashed var(--text-secondary); padding: 100px 20px; text-align: center; border-radius: 8px; opacity: 0.5;">
+>>>>>>> 6770cba (Recuperação do sistema após erro de árvore)
             <p style="color: var(--text-secondary);">Novo projeto em desenvolvimento...</p>
         </div>
     </div>
 </section>
+<<<<<<< HEAD
 
     <script src="./js/toggleBar.js"></script>
     <script src="./js/typewriter.js"></script>
     <script src="./js/lightMode.js"></script>
+=======
+    <script>
+    function mudaTema() {
+        // 1. Alterna a classe no BODY
+        document.body.classList.toggle('light-mode');
+        
+        // 2. Salva a preferência
+        const modoClaroAtivo = document.body.classList.contains('light-mode');
+        localStorage.setItem('tema', modoClaroAtivo ? 'light' : 'dark');
+        
+        console.log("Botão clicado! Modo claro ativo:", modoClaroAtivo);
+    }
+
+    // Ao carregar a página, verifica se deve aplicar o modo claro
+    window.addEventListener('DOMContentLoaded', () => {
+        if (localStorage.getItem('tema') === 'light') {
+            document.body.classList.add('light-mode');
+        }
+    });
+</script>
+    <script src="./js/toggleBar.js"></script>
+    <script src="./js/typewriter.js"></script>
+    
+>>>>>>> 6770cba (Recuperação do sistema após erro de árvore)
 </body>
 </html>

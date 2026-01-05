@@ -2,6 +2,10 @@
 
 *{
     margin: 0;
+<<<<<<< HEAD
+=======
+    transition: background-color 0.3s ease, color 0.3s ease;
+>>>>>>> 6770cba (Recuperação do sistema após erro de árvore)
 }
 body, html {
     height: 100%;
@@ -11,9 +15,19 @@ body, html {
 html{
     scroll-behavior: smooth;
 }
+<<<<<<< HEAD
 
 body{
     background-color: var(--bg-main);
+=======
+.card, .project-featured, header {
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+body{
+    background-color: var(--bg-main);
+    transition: background-color 0.3s ease, color 0.3s ease;
+>>>>>>> 6770cba (Recuperação do sistema após erro de árvore)
 }
 
 header{
@@ -31,6 +45,32 @@ nav{
     width: 80%;
     
 }
+<<<<<<< HEAD
+=======
+@media (max-width:959px){
+    header{
+        display: flex;
+        align-items: center;
+        
+    }
+
+    nav{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        
+        
+    }
+
+    ul{
+       display: none;
+    }
+    li{
+        display: none;
+    }
+}
+>>>>>>> 6770cba (Recuperação do sistema após erro de árvore)
 
 .title{
 
