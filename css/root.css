@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
@@ -60,62 +59,3 @@
 }
 
     }
-=======
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
-
-:root {
-    --bg-main: #020B1F;
-    --bg-secondary: #020B1FCC;
-    --bg-terciary: #01040b;
-    --bg-panel: #071A3D;
-    --bg-hover: #0A2A66;
-
-    --border-subtle: #12326B;
-    --border-strong: #1E40AF;
-
-    --text-primary: #E6ECFF;
-    --text-secondary: #9FB3E1;
-    --text-muted: #6B85C6;
-
-    --accent-primary: #3B82F6;
-    --accent-secondary: #22D3EE;
-    --accent-success: #22C55E;
-    --accent-warning: #FACC15;
-    --accent-danger: #EF4444;
-
-    --glass-bg: rgba(7, 26, 61, 0.7);
-    --glass-blur: blur(14px);
-    --shadow-soft: 0 10px 30px rgba(2, 11, 31, 0.6);
-    --shadow-strong: 0 20px 60px rgba(2, 11, 31, 0.8);
-
-    --radius-sm: 6px;
-    --radius-md: 12px;
-    --radius-lg: 18px;
-
-    --transition-fast: 0.2s ease;
-    --transition-normal: 0.4s ease;
-} /* <--- AQUI FECHA O ROOT */
-
-/* O light-mode tem que ficar FORA do root */
-.light-mode {
-    --bg-main: #FFFFFF !important;
-    --bg-terciary: #bdbdbd !important;
-    --bg-panel: #E2E8F0 !important;
-    --text-primary: #020B1F !important;
-    --text-secondary: #334155 !important;
-    --accent-secondary: #3B82F6 !important;
-    --border-subtle: #CBD5E1 !important;
-    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
-}
-
-/* Regras extras para garantir a aplicação */
-.light-mode body {
-    background-color: var(--bg-main) !important;
-    color: var(--text-primary) !important;
-}
-
-.light-mode .card, 
-.light-mode .project-featured {
-    background-color: var(--bg-terciary) !important;
-}
->>>>>>> 6770cba (Recuperação do sistema após erro de árvore)
