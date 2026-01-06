@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./css/light.css">
     <link rel="stylesheet" href="./css/especialidades.css">
     <link rel="stylesheet" href="./css/projetos.css">
+    <link rel="stylesheet" href="./css/contatos.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
@@ -26,7 +27,7 @@
              <ul>
             <li>About</li>
             <li>Projects</li>
-            <li>Contact</li>
+           <li onclick="toggleModal()">Contact</li>
 
             <li id="light" onclick="mudaTema()">Theme</li>
 
@@ -196,7 +197,7 @@
         </div>
 
 
-        <div class="card-placeholder" style="border: 2px dashed var(--text-secondary); padding: 20px; text-align: center; border-radius: 8px; opacity: 0.5;">
+        <div class="card-placeholder" style="border: 2px dashed var(--text-secondary); padding: 100px 20px; text-align: center; border-radius: 8px; opacity: 0.5;">
 
        
 
@@ -205,6 +206,59 @@
     
 </section>
 
+
+<div id="contact-modal" class="modal-overlay">
+    <div class="modal-content">
+        <span class="close-modal" onclick="toggleModal()">&times;</span>
+        
+        <div class="modal-grid">
+            <div class="modal-info">
+                <h2>Vamos construir algo juntos?</h2>
+                <p>Estou disponível para novos projetos e colaborações. Sinta-se à vontade para me enviar uma mensagem.</p>
+                
+                <div class="contact-item">
+                    <div class="icon-box"><i class='bx bx-envelope'></i></div>
+                    <div>
+                        <span class="label">Email</span>
+                        <a href="mailto:rhuan@email.com">crpvieira6000@gmail.com</a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="icon-box"><i class='bx bxl-linkedin'></i></div>
+                    <div>
+                        <span class="label">LinkedIn</span>
+                        <a href="#">LinkedIn Profile</a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="icon-box"><i class='bx bxl-github'></i></div>
+                    <div>
+                        <span class="label">GitHub</span>
+                        <a href="#">GitHub Profile</a>
+                    </div>
+                </div>
+            </div>
+
+            <form class="modal-form">
+                <div class="input-group">
+                    <label>Seu nome</label>
+                    <input type="text" placeholder="Digite seu nome completo">
+                </div>
+                <div class="input-group">
+                    <label>Seu email</label>
+                    <input type="email" placeholder="exemplo@gmail.com">
+                </div>
+                <div class="input-group">
+                    <label>Sua mensagem</label>
+                    <textarea placeholder="Deixe sua mensagem aqui..." rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn-send">Enviar Mensagem</button>
+            </form>
+        </div>
+    </div>
+</div>
 
     <script src="./js/toggleBar.js"></script>
     <script src="./js/typewriter.js"></script>
