@@ -47,8 +47,11 @@
         <h3 class="typewriter-text">
             Front-End Developer em formação | Java | UX/UI | IA e Prompts
         </h3>
-
-        <button class="dowload-cv">Baixar CV</button>
+        <div class="botoes" style="display: flex; gap: 16px;" >
+            <button class="dowload-cv">Baixar CV</button>
+        </div>
+        
+        
     </div>
 
     <a href="#about" class="scroll-down">
@@ -110,7 +113,7 @@
     </div>
 </div>
 
-<a href="#projetos" class="ver-projetos">ver projetos</a>
+
 </section>
 
 
@@ -206,6 +209,16 @@
     
 </section>
 
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2026 Rhuan Vieira. Todos os direitos reservados.</p>
+        <div class="footer-social">
+            <a href="https://github.com/RhuanVieira" target="_blank"><i class='bx bxl-github'></i></a>
+            <a href="#" target="_blank"><i class='bx bxl-linkedin'></i></a>
+            <a href="#" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+        </div>
+    </div>
+</footer>
 
 <div id="contact-modal" class="modal-overlay">
     <div class="modal-content">
@@ -220,7 +233,7 @@
                     <div class="icon-box"><i class='bx bx-envelope'></i></div>
                     <div>
                         <span class="label">Email</span>
-                        <a href="mailto:rhuan@email.com">crpvieira6000@gmail.com</a>
+                        <a href="mailto:dev.rhuan.vieira@gmail.com">dev.rhuan.vieira@gmail.com</a>
                     </div>
                 </div>
 
@@ -228,7 +241,7 @@
                     <div class="icon-box"><i class='bx bxl-linkedin'></i></div>
                     <div>
                         <span class="label">LinkedIn</span>
-                        <a href="#">LinkedIn Profile</a>
+                        <a href="#">Rhuan Vieira da Silva</a>
                     </div>
                 </div>
 
@@ -236,7 +249,7 @@
                     <div class="icon-box"><i class='bx bxl-github'></i></div>
                     <div>
                         <span class="label">GitHub</span>
-                        <a href="#">GitHub Profile</a>
+                        <a href="#">RhuanVieira</a>
                     </div>
                 </div>
             </div>
@@ -285,7 +298,12 @@
 </script>
     <script src="./js/toggleBar.js"></script>
     <script src="./js/typewriter.js"></script>
-    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.js"></script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init("JIqpITWEhnl2HoXwG");
+    })();
+    </script>
 
 </body>
 </html>

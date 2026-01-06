@@ -175,7 +175,7 @@ ul{
     font-family: "IBM Plex Sans", sans-serif;
     font-size: 12px;
     position: relative;
-    top: 25px;
+    top: px;
     transition: background-color var(--transition-normal);
 }
 
@@ -228,6 +228,52 @@ ul{
 
 .arrow span:nth-child(2) {
     animation-delay: -0.2s;
+}
+
+footer {
+    background-color: var(--bg-terciary);
+    padding: 40px 0;
+    border-top: 1px solid var(--bg-terciary);
+    margin-top: 50px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.footer-content p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.footer-social {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-social a {
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    transition: var(--transition-normal);
+}
+
+.footer-social a:hover {
+    color: var(--accent-primary);
+    transform: translateY(-3px);
+}
+
+/* Ajuste responsivo para celulares */
+@media (max-width: 600px) {
+    .footer-content {
+        gap: 15px;
+    }
 }
 
 
