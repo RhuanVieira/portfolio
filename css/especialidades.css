@@ -121,3 +121,10 @@
     text-decoration: none;
     transition: background-color var(--transition-normal);
 }
+
+@media (max-width:1026px){
+    .cards-container{
+        display: flex;
+        flex-direction: column;
+    }
+}
