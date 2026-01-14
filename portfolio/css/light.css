@@ -1,0 +1,59 @@
+/* Container do Switch */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 24px;
+    position: relative;
+    width: 50px;
+}
+
+.theme-switch input {
+    display: none; /* Esconde o checkbox real */
+}
+
+/* O trilho do botão */
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+
+/* A bolinha que arrasta */
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 16px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 16px;
+}
+
+/* Quando checado (arrasta para o lado) */
+input:checked + .slider {
+    background-color: #2196F3; /* Cor quando ligado */
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Deixa arredondado */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
