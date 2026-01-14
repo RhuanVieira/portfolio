@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./css/especialidades.css">
     <link rel="stylesheet" href="./css/projetos.css">
     <link rel="stylesheet" href="./css/contatos.css">
+    <link rel="stylesheet" href="video.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
@@ -25,8 +26,8 @@
              I am a <span class="typewriter"></span>
             </h1>
              <ul>
-            <li><a href="">About</a></li>
-            <li><a href="">Projects</a></li>
+            <li><a href="" style="text-decoration: none; color: var(--text-secondary);" >About</a></li>
+            <li><a href="" style="text-decoration: none;color: var(--text-secondary);">Projects</a></li>
            <li onclick="toggleModal()">Contact</li>
 
             <li id="light" onclick="mudaTema()">Theme</li>
@@ -34,6 +35,8 @@
              </ul>
 
         </nav>
+
+        
     </header>
 
    <main class="hero">
@@ -182,11 +185,11 @@
                 </div>
 
                 <div class="project-links">
-                    <a href="#" class="btn-project" target="_blank">
-                        Live Demo <i class='bx bx-link-external'></i>
+                    <a  class="btn-project"  onclick="toggleVideo('https://www.youtube.com/embed/SEU_ID_AQUI', 'Express Eats', 'App de delivery feito com React e Firebase.')">
+                        Ver video
                     </a>
                     <a href="https://github.com/RhuanVieira/bibliotec" class="btn-github" target="_blank">
-                        <i class='bx bxl-github'></i> Code
+                        <i class='bx bxl-github'></i> Indisponível :\
                     </a>
                 </div>
             </div>
@@ -250,15 +253,15 @@
             <form class="modal-form">
                 <div class="input-group">
                     <label>Seu nome</label>
-                    <input type="text" placeholder="Digite seu nome completo">
+                    <input type="text" placeholder="Digite seu nome completo" required>
                 </div>
                 <div class="input-group">
                     <label>Seu email</label>
-                    <input type="email" placeholder="exemplo@gmail.com">
+                    <input type="email" placeholder="exemplo@gmail.com" required>
                 </div>
                 <div class="input-group">
                     <label>Sua mensagem</label>
-                    <textarea placeholder="Deixe sua mensagem aqui..." rows="4"></textarea>
+                    <textarea placeholder="Deixe sua mensagem aqui..." rows="4" required></textarea>
                 </div>
                 <button type="submit" class="btn-send">Enviar Mensagem</button>
             </form>
@@ -266,23 +269,45 @@
     </div>
 </div>
 
+<div id="video-modal" class="modal-overlay">
+    <div class="modal-content video-content">
+        <span class="close-modal" onclick="toggleVideo()">&times;</span>
+        
+        <div class="video-container">
+            <iframe 
+                id="player-iframe"
+                src="" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+        
+        <div class="video-info">
+            <h3 id="video-title">Título do Projeto</h3>
+            <p id="video-description">Breve descrição sobre as tecnologias usadas neste projeto.</p>
+        </div>
+    </div>
+</div>
+
     <script src="./js/toggleBar.js"></script>
     <script src="./js/typewriter.js"></script>
     <script src="./js/lightMode.js"></script>
+    <script src="./js/video.js"></script>
 
     <script>
     function mudaTema() {
-        // 1. Alterna a classe no BODY
+    
         document.body.classList.toggle('light-mode');
         
-        // 2. Salva a preferência
+        
         const modoClaroAtivo = document.body.classList.contains('light-mode');
         localStorage.setItem('tema', modoClaroAtivo ? 'light' : 'dark');
         
         console.log("Botão clicado! Modo claro ativo:", modoClaroAtivo);
     }
 
-    // Ao carregar a página, verifica se deve aplicar o modo claro
+  
     window.addEventListener('DOMContentLoaded', () => {
         if (localStorage.getItem('tema') === 'light') {
             document.body.classList.add('light-mode');

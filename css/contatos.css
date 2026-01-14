@@ -1,42 +1,46 @@
 /* --- Overlay (Fundo escurecido) --- */
 .modal-overlay {
-    display: none; /* Inicia escondido */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(6px); /* Efeito de desfoque no fundo */
+    background: rgba(0, 0, 0, 0.85); /* Aumentei um pouco o contraste */
+    backdrop-filter: blur(8px);
     z-index: 2000;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 15px; /* Espaçamento de segurança para telas pequenas */
     font-family: "IBM Plex Sans", sans-serif;
 }
 
 /* --- Container Principal --- */
 .modal-content {
-    background: var(--bg-main); /* Usa o azul escuro original */
-    width: 100%;
-    max-width: 850px;
+    background: var(--bg-main);
+    width: 100%; /* Ocupa a largura disponível */
+    max-width: 850px; /* Mas não passa disso */
+    max-height: 80vh; /* Não ultrapassa a altura da tela */
     border-radius: 20px;
+    z-index: 9999999;
     position: relative;
-    padding: 100px;
+    padding: 40px; /* Reduzi levemente para ganhar espaço interno */
     color: var(--text-primary);
     border: 1px solid var(--bg-terciary);
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    overflow-y: auto; /* Permite scroll interno se o conteúdo for maior que a tela */
 }
 
 /* Botão Fechar (X) */
 .close-modal {
     position: absolute;
-    top: 20px;
-    right: 25px;
-    font-size: 28px;
+    top: 15px;
+    right: 20px;
+    font-size: 32px; /* Maior para facilitar o toque no celular */
     cursor: pointer;
     color: var(--text-secondary);
     transition: var(--transition-normal);
+    z-index: 10;
 }
 
 .close-modal:hover {
@@ -47,19 +51,20 @@
 .modal-grid {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
-    gap: 50px;
+    gap: 40px;
+    align-items: start;
 }
 
 /* Lado Esquerdo (Informações) */
 .modal-info h2 {
-    font-size: 2.2rem;
+    font-size: clamp(1.5rem, 5vw, 2.2rem); /* Fonte fluida: diminui em telas pequenas */
     margin-bottom: 15px;
     line-height: 1.1;
 }
 
 .modal-info p {
     color: var(--text-secondary);
-    margin-bottom: 35px;
+    margin-bottom: 30px;
     font-size: 0.95rem;
 }
 
@@ -67,12 +72,12 @@
     display: flex;
     align-items: center;
     gap: 15px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .icon-box {
-    background: var(--bg-terciary); /* Mesma cor dos seus cards */
-    width: 45px;
+    background: var(--bg-terciary);
+    min-width: 45px; /* Mantém o tamanho circular mesmo com texto longo ao lado */
     height: 45px;
     display: flex;
     align-items: center;
@@ -82,24 +87,21 @@
     color: var(--accent-primary);
 }
 
-.contact-item .label {
-    display: block;
-    font-size: 0.75rem;
-    color: var(--text-secondary);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
 .contact-item a {
     color: var(--text-primary);
     text-decoration: none;
     font-weight: 600;
     font-size: 0.9rem;
+    word-break: break-all; /* Evita que e-mails longos quebrem o layout */
 }
 
 /* --- Lado Direito (Formulário) --- */
+.modal-form {
+    width: 100%;
+}
+
 .modal-form .input-group {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .modal-form label {
@@ -111,26 +113,21 @@
 
 .modal-form input, 
 .modal-form textarea {
-    width: 90%;
+    width: 100%; /* Ajustado para ocupar 100% do container pai */
     padding: 14px;
-    background: var(--bg-terciary); /* Cor consistente com seu design */
+    background: var(--bg-terciary);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     color: var(--text-primary);
     font-family: inherit;
     outline: none;
     transition: 0.3s;
-    
+    box-sizing: border-box; /* Garante que o padding não aumente a largura */
 }
 
-.modal-form input:focus, 
-.modal-form textarea:focus {
-    border-color: var(--accent-primary);
-}
-
-/* Botão Enviar com o seu Rosa/Azul principal */
+/* Botão Enviar */
 .btn-send {
-    width: 96%;
+    width: 100%; /* Agora ocupa toda a largura do formulário */
     padding: 16px;
     background: var(--accent-primary); 
     color: #fff;
@@ -142,71 +139,59 @@
     margin-top: 10px;
 }
 
-.btn-send:hover {
-    filter: brightness(1.2);
-    transform: translateY(-2px);
-}
+/* --- Media Queries para Ajuste Fino --- */
 
-/* --- Ajustes para o Modo Claro --- */
-body.light-mode .modal-content {
-    background: #FFFFFF !important;
-    border-color: #eee;
-}
-
-body.light-mode .modal-form input,
-body.light-mode .modal-form textarea,
-body.light-mode .icon-box {
-    background: #F0F4F8 !important; /* Cor clara de fundo para inputs */
-    border-color: #e2e8f0;
-}
-
-/* --- Animação de Entrada --- */
-@keyframes modalEntrada {
-    from {
-        opacity: 0;
-        transform: scale(0.8) translateY(-30px);
-        filter: blur(10px);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1) translateY(0);
-        filter: blur(0);
-    }
-}
-
-/* --- Classe de Ativação --- */
-.modal-overlay.active {
-    display: flex; /* Muda de none para flex */
-    animation: fadeIn 0.3s ease-out;
-}
-
-.modal-overlay.active .modal-content {
-    animation: modalEntrada 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-/* Efeito de fade no fundo escuro */
-@keyframes fadeIn {
-    from { background: rgba(0, 0, 0, 0); }
-    to { background: rgba(0, 0, 0, 0.8); }
-}
-
-/* Ajuste no conteúdo para suavizar a borda */
-.modal-content {
-    transition: var(--transition-normal);
-    /* ... mantenha o restante do seu código anterior ... */
-}
-
-/* --- Responsividade --- */
+/* Celulares e Tablets em pé */
 @media (max-width: 768px) {
     .modal-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Uma coluna só */
         gap: 30px;
     }
-    
+
     .modal-content {
-        padding: 30px;
-        margin: 10px;
-        overflow-y: auto;
-        max-height: 95vh;
+        padding: 30px 20px;
+        border-radius: 6px;
+        width: 90%; /* Quase toda a tela */
+    }
+    .close-modal{
+       right: 0px;
+    }
+
+    .modal-info {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
     }
 }
+
+/* Celulares muito pequenos (iPhone SE / etc) */
+@media (max-width: 400px) {
+    .modal-content {
+        padding: 40px 15px 20px 15px;
+    }
+
+    .modal-info h2 {
+        font-size: 1.4rem;
+    }
+}
+
+/* --- Ajustes de Tema e Animações (Mantidos) --- */
+body.light-mode .modal-content { background: #FFFFFF !important; border-color: #eee; }
+body.light-mode .modal-form input, body.light-mode .modal-form textarea, body.light-mode .icon-box { background: #F0F4F8 !important; border-color: #e2e8f0; }
+
+.modal-overlay.active { display: flex; animation: fadeIn 0.3s ease-out; }
+.modal-overlay.active .modal-content { animation: modalEntrada 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+
+@keyframes modalEntrada {
+    from { opacity: 0; transform: scale(0.8) translateY(-30px); filter: blur(10px); }
+    to { opacity: 1; transform: scale(1) translateY(0); filter: blur(0); }
+}
+
+@keyframes fadeIn { from { background: rgba(0, 0, 0, 0); } to { background: rgba(0, 0, 0, 0.85); } }

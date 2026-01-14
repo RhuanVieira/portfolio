@@ -19,7 +19,7 @@ body{
 
 header{
     position: fixed;
-    z-index: 99999;
+    z-index: 9998;
     width: 100%;
     background-color: var(--bg-terciary);
     display: flex;
@@ -164,6 +164,7 @@ ul{
 .typewriter-text {
     font-size: 1rem;
     color: var(--accent-secondary);
+    text-align: center;
     font-family: "IBM Plex Sans", sans-serif;
 }
 .dowload-cv{

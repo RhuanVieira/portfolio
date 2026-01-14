@@ -62,7 +62,7 @@
     }
  body.light-mode {
   --bg-main: #FFFFFF !important;
-  --bg-terciary: #F0F4F8 !important;
+  --bg-terciary:  #d3d3d3 !important;
   --text-primary: #020B1F !important;
   --text-secondary: #334155 !important;
   --accent-secondary:#3b82f6 !important;

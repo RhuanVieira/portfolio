@@ -1,0 +1,7 @@
+ <div class="project-links">
+                    <a href="#" class="btn-project" target="_blank">
+                        Live Demo <i class='bx bx-link-external'></i>
+                    </a>
+                    <a href="https://github.com/RhuanVieira/bibliotec" class="btn-github" target="_blank">
+                        <i class='bx bxl-github'></i> Code
+                    </a>
