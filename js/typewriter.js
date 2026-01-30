@@ -1,5 +1,5 @@
 const textElement = document.querySelector(".typewriter");
-const phrases = ["Software Engineer", "Front-End Developer", "Tech Enthusiast"];
+const phrases = ["PHP Enginner", "Fullstack Student", "Tech Enthusiast"];
 let phraseIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
