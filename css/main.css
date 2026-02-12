@@ -68,7 +68,7 @@ nav{
 
     /* Compensa o header fixo */
     .hero {
-        padding-top: 120px;
+        padding-top: 0px;
     }
 }
 
