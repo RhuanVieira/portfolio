@@ -13,7 +13,7 @@
     margin-top: 50px;
     display: flex;
     flex-direction: column;
-    gap: 60px; /* Espaço entre um projeto e outro */
+    gap: 60px;
 }
 
 /* --- Card de Destaque --- */
@@ -34,15 +34,16 @@
 
 /* Área da Imagem */
 .project-img {
-    flex: 1.2; /* Dá um pouco mais de espaço para a imagem */
-    min-width: 400px;
-    background-color: #1a1a1a; /* Cor de fundo caso a imagem demore a carregar */
+    flex: 1.2;
+    background-color: #1a1a1a;
+    display: flex;
 }
 
 .project-img img {
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Garante que a arte do Canva preencha o espaço sem esticar */
+    height: auto;              /* 🔧 evita corte vertical */
+    max-height: 100%;
+    object-fit: cover;
     display: block;
 }
 
@@ -81,17 +82,20 @@
     display: flex;
     gap: 15px;
     margin-top: 10px;
+    flex-wrap: wrap;           /* 🔧 evita corte */
 }
 
-.btn-project, .btn-github {
+.btn-project,
+.btn-github {
     padding: 12px 25px;
     border-radius: 6px;
     text-decoration: none;
     font-weight: 600;
     font-size: 0.9rem;
-    display: flex;
+    display: inline-flex;      /* 🔧 melhor ajuste de texto */
     align-items: center;
     gap: 8px;
+    white-space: nowrap;       /* 🔧 impede texto quebrar feio */
     transition: 0.3s;
 }
 
@@ -115,14 +119,13 @@
 }
 
 /* --- Responsividade (Celular) --- */
-@media (max-width: 992px) {
+@media (max-width: 1214px) {
     .project-featured {
-        flex-direction: column; /* Imagem em cima, texto embaixo */
+        flex-direction: column;
     }
 
     .project-img {
-        min-width: 100%;
-        height: 250px;
+        width: 100%;
     }
 
     .project-info {
@@ -131,5 +134,25 @@
 
     .project-info h3 {
         font-size: 1.8rem;
+    }
+
+      .project-links {
+        flex-direction: column;
+        width: 100%;
+        align-items: stretch;   /* força alinhamento correto */
+        margin: 0;              /* remove deslocamento */
+        padding: 0;             /* remove deslocamento */
+    }
+
+    .btn-project,
+    .btn-github {
+        width: 100%;
+        box-sizing: border-box; /* impede overflow lateral */
+        justify-content: center;
+        text-align: center;
+        font-size: 0.95rem;
+        padding: 14px 16px;
+        margin: 0;              /* remove qualquer empurrão lateral */
+        white-space: nowrap;
     }
 }

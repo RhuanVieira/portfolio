@@ -4,22 +4,20 @@ function toggleVideo(videoUrl = "", title = "", desc = "") {
     const titleElem = document.getElementById('video-title');
     const descElem = document.getElementById('video-description');
 
-    modal.classList.toggle('active');
+    const isOpen = modal.classList.contains('active');
 
-    if (modal.classList.contains('active')) {
-        
-        iframe.src = videoUrl;
+    if (!isOpen) {
+        modal.classList.add('active');
+
+        iframe.src = videoUrl + "?autoplay=1";
         titleElem.innerText = title;
         descElem.innerText = desc;
+
         document.body.style.overflow = 'hidden';
     } else {
-        
+        modal.classList.remove('active');
+
         iframe.src = "";
         document.body.style.overflow = 'auto';
     }
 }
-
-
-document.getElementById('video-modal').addEventListener('click', function(e) {
-    if (e.target === this) toggleVideo();
-});
